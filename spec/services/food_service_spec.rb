@@ -7,7 +7,7 @@ RSpec.describe "Food Service" do
     expect(service).to be_a FoodService
   end
 
-  describe "#foods", :vcr do
+  describe "#foods" do
     it "returns array of foods data" do
       foods = FoodService.new.search("Sweet Potatoes")
       food1 = foods.first

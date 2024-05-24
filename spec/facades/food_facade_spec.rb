@@ -11,8 +11,9 @@ RSpec.describe FoodFacade do
     facade = FoodFacade.new
     query = "Sweet Potatoes"
     search = facade.food_search(query)
-
+  
     expect(search).to be_an(Array)
-    expect(search)
+    expect(search.first.brand_owner).to be_a(String) 
+    expect(search.first.description).to be_a(String)
   end
 end
